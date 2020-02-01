@@ -1,0 +1,75 @@
+<div class="example-container">
+  <h2>미정</h2>
+
+  <div
+    cdkDropList
+    #list0="cdkDropList"
+    [cdkDropListData]="team0"
+    [cdkDropListConnectedTo]="[list1, list2, list3]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <app-box
+      *ngFor="let character of team0"
+      [character]="character"
+      cdkDrag
+    ></app-box>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>1팀</h2>
+
+  <div
+    cdkDropList
+    #list1="cdkDropList"
+    [cdkDropListData]="team1"
+    [cdkDropListConnectedTo]="[list0, list2, list3]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <app-box
+      *ngFor="let character of team1"
+      [character]="character"
+      cdkDrag
+    ></app-box>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>2팀</h2>
+
+  <div
+    cdkDropList
+    #list2="cdkDropList"
+    [cdkDropListData]="team2"
+    [cdkDropListConnectedTo]="[list0, list1, list3]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <app-box
+      *ngFor="let character of team2"
+      [character]="character"
+      cdkDrag
+    ></app-box>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>3팀</h2>
+
+  <div
+    cdkDropList
+    #list3="cdkDropList"
+    [cdkDropListData]="team3"
+    [cdkDropListConnectedTo]="[list0, list1, list2]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <app-box
+      *ngFor="let character of team3"
+      [character]="character"
+      cdkDrag
+    ></app-box>
+  </div>
+</div>

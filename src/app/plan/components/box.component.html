@@ -1,0 +1,10 @@
+<div class="example-box">
+  {{ character.id }} | {{ character.job }} | Lv. {{ character.level }} |
+  {{
+    character.floor
+      ? character.floor + '층'
+      : character.oldFloor
+      ? character.oldFloor + '층(구)'
+      : '정보없음'
+  }}
+</div>
