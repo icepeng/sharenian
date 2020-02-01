@@ -52,6 +52,8 @@ export class PlanTableComponent implements OnInit {
 
   ngOnInit() {
     this.dataSource.sort = this.sort;
+    this.dataSource.sort.active = 'floor';
+    this.dataSource.sort.direction = 'desc';
 
     this.dataService.characters$
       .pipe(

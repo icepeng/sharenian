@@ -129,7 +129,9 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {}
+          "options": {
+            "baseHref": "https://icepeng.github.io/sharenian/"
+          }
         }
       }
     }
