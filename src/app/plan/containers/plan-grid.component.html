@@ -80,13 +80,13 @@
   <div
     cdkDropList
     #list4="cdkDropList"
-    [cdkDropListData]="team3"
+    [cdkDropListData]="team4"
     [cdkDropListConnectedTo]="[list0, list1, list2, list3, list5, list6]"
     class="example-list"
     (cdkDropListDropped)="drop($event)"
   >
     <app-box
-      *ngFor="let character of team3"
+      *ngFor="let character of team4"
       [character]="character"
       cdkDrag
     ></app-box>
@@ -99,13 +99,13 @@
   <div
     cdkDropList
     #list5="cdkDropList"
-    [cdkDropListData]="team3"
+    [cdkDropListData]="team5"
     [cdkDropListConnectedTo]="[list0, list1, list2, list3, list4, list6]"
     class="example-list"
     (cdkDropListDropped)="drop($event)"
   >
     <app-box
-      *ngFor="let character of team3"
+      *ngFor="let character of team5"
       [character]="character"
       cdkDrag
     ></app-box>
@@ -118,13 +118,13 @@
   <div
     cdkDropList
     #list6="cdkDropList"
-    [cdkDropListData]="team3"
+    [cdkDropListData]="team6"
     [cdkDropListConnectedTo]="[list0, list1, list2, list3, list4, list5, list6]"
     class="example-list"
     (cdkDropListDropped)="drop($event)"
   >
     <app-box
-      *ngFor="let character of team3"
+      *ngFor="let character of team6"
       [character]="character"
       cdkDrag
     ></app-box>

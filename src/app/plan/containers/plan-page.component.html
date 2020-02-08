@@ -1,6 +1,8 @@
-<div class="wrapper">
+<div class="wrapper" [class.hidden]="hidden">
   <app-plan-table></app-plan-table>
+  <button *ngIf="!hidden" (click)="hidden = true" mat-raised-button color="primary">숨기기</button>
 </div>
 <div class="wrapper">
+  <button *ngIf="hidden" (click)="hidden = false" mat-raised-button color="primary">보이기</button>
   <app-plan-grid></app-plan-grid>
 </div>

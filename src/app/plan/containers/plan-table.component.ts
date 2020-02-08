@@ -1,6 +1,7 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSort, MatTableDataSource } from '@angular/material';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { filter, take } from 'rxjs/operators';
 import { Character } from '../../core/models/character.model';
 import { DataService } from '../../core/services/data.service';
@@ -64,7 +65,7 @@ export class PlanTableComponent implements OnInit {
         this.dataSource.data = characters;
       });
 
-    this.selection.onChange.subscribe(event => this.eventService.emit(event));
+    this.selection.changed.subscribe(event => this.eventService.emit(event));
   }
 
   applyFilter(filterValue: string) {
