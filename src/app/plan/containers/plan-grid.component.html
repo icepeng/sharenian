@@ -5,7 +5,7 @@
     cdkDropList
     #list0="cdkDropList"
     [cdkDropListData]="team0"
-    [cdkDropListConnectedTo]="[list1, list2, list3]"
+    [cdkDropListConnectedTo]="[list1, list2, list3, list4, list5, list6]"
     class="example-list"
     (cdkDropListDropped)="drop($event)"
   >
@@ -18,13 +18,13 @@
 </div>
 
 <div class="example-container">
-  <h2>1팀</h2>
+  <h2>1-1</h2>
 
   <div
     cdkDropList
     #list1="cdkDropList"
     [cdkDropListData]="team1"
-    [cdkDropListConnectedTo]="[list0, list2, list3]"
+    [cdkDropListConnectedTo]="[list0, list2, list3, list4, list5, list6]"
     class="example-list"
     (cdkDropListDropped)="drop($event)"
   >
@@ -37,13 +37,13 @@
 </div>
 
 <div class="example-container">
-  <h2>2팀</h2>
+  <h2>1-2</h2>
 
   <div
     cdkDropList
     #list2="cdkDropList"
     [cdkDropListData]="team2"
-    [cdkDropListConnectedTo]="[list0, list1, list3]"
+    [cdkDropListConnectedTo]="[list0, list1, list3, list4, list5, list6]"
     class="example-list"
     (cdkDropListDropped)="drop($event)"
   >
@@ -56,13 +56,70 @@
 </div>
 
 <div class="example-container">
-  <h2>3팀</h2>
+  <h2>1-3</h2>
 
   <div
     cdkDropList
     #list3="cdkDropList"
     [cdkDropListData]="team3"
-    [cdkDropListConnectedTo]="[list0, list1, list2]"
+    [cdkDropListConnectedTo]="[list0, list1, list2, list4, list5, list6]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <app-box
+      *ngFor="let character of team3"
+      [character]="character"
+      cdkDrag
+    ></app-box>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>2-1</h2>
+
+  <div
+    cdkDropList
+    #list4="cdkDropList"
+    [cdkDropListData]="team3"
+    [cdkDropListConnectedTo]="[list0, list1, list2, list3, list5, list6]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <app-box
+      *ngFor="let character of team3"
+      [character]="character"
+      cdkDrag
+    ></app-box>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>2-2</h2>
+
+  <div
+    cdkDropList
+    #list5="cdkDropList"
+    [cdkDropListData]="team3"
+    [cdkDropListConnectedTo]="[list0, list1, list2, list3, list4, list6]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <app-box
+      *ngFor="let character of team3"
+      [character]="character"
+      cdkDrag
+    ></app-box>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>2-3</h2>
+
+  <div
+    cdkDropList
+    #list6="cdkDropList"
+    [cdkDropListData]="team3"
+    [cdkDropListConnectedTo]="[list0, list1, list2, list3, list4, list5, list6]"
     class="example-list"
     (cdkDropListDropped)="drop($event)"
   >

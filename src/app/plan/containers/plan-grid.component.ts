@@ -63,6 +63,9 @@ export class PlanGridComponent implements OnInit {
   team1: Character[] = [];
   team2: Character[] = [];
   team3: Character[] = [];
+  team4: Character[] = [];
+  team5: Character[] = [];
+  team6: Character[] = [];
 
   constructor(private eventService: EventService) {}
 
@@ -79,6 +82,15 @@ export class PlanGridComponent implements OnInit {
         x => !event.removed.find(y => x.id === y.id)
       );
       this.team3 = this.team3.filter(
+        x => !event.removed.find(y => x.id === y.id)
+      );
+      this.team4 = this.team4.filter(
+        x => !event.removed.find(y => x.id === y.id)
+      );
+      this.team5 = this.team5.filter(
+        x => !event.removed.find(y => x.id === y.id)
+      );
+      this.team6 = this.team6.filter(
         x => !event.removed.find(y => x.id === y.id)
       );
     });
